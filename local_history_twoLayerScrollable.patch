@@ -1,0 +1,58 @@
+Index: lib/screens/portfolio_screen.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lib/screens/portfolio_screen.dart	(date 1586299537000)
++++ lib/screens/portfolio_screen.dart	(date 1586299537000)
+@@ -10,7 +10,7 @@
+ class _PortfolioScreenState extends State<PortfolioScreen> {
+   bool isSearching = false;
+   SimpleTimeSeriesChart chart = SimpleTimeSeriesChart.withSampleData();
+-
++  List<bool> isSelected = [true, false, false];
+   @override
+   Widget build(BuildContext context) {
+     return Scaffold(
+@@ -86,6 +86,32 @@
+               ),
+               // Chart: Change along time
+               Container(height: 150.0, width: 400.0,child: chart,),
++//          // Options for time scale
++              Container(
++                padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 5.0),
++                child:Align(
++                  alignment: Alignment.centerRight,
++                  child: ToggleButtons(
++                    children: <Widget>[
++                      Text('Day'),
++                      Text('Week'),
++                      Text('Year'),
++                    ],
++                    onPressed: (int index) {
++                      setState(() {
++                        for (int buttonIndex = 0; buttonIndex < isSelected.length; buttonIndex++) {
++                          if (buttonIndex == index) {
++                            isSelected[buttonIndex] = !isSelected[buttonIndex];
++                          } else {
++                            isSelected[buttonIndex] = false;
++                          }
++                        }
++                      });
++                    },
++                    isSelected: isSelected,
++                  ),
++                ),
++              ),
+             ],
+           ),
+           DraggableScrollableSheetTickers(),
+@@ -93,7 +119,7 @@
+       ),
+       bottomNavigationBar: BottomNavigationBar(
+         backgroundColor: Colors.blueGrey[50],
+-        selectedItemColor: Colors.blueGrey[900],
++        selectedItemColor: Colors.blueGrey[800],
+         unselectedItemColor: Colors.blueGrey[200],
+         type: BottomNavigationBarType.fixed,
+         items: const <BottomNavigationBarItem>[

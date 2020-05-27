@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "96933026516",
+    "firebase_url": "https://mtgbroker-f131d.firebaseio.com",
+    "project_id": "mtgbroker-f131d",
+    "storage_bucket": "mtgbroker-f131d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96933026516:android:e90e6f0c619a625e1bf941",
+        "android_client_info": {
+          "package_name": "com.gm.mtg_broker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96933026516-ro4fvbcvq3lcpqd6tsf6e4ce5vu9lpo4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gm.mtg_broker",
+            "certificate_hash": "c1ac47c9c9521027ae606dfbad18c010fbb0ae01"
+          }
+        },
+        {
+          "client_id": "96933026516-q61r0dprq2v98ben33c9nph9is9gj1hf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuzWaogulMfHpPiU13Gk4qYttPS2nY324"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96933026516-q61r0dprq2v98ben33c9nph9is9gj1hf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
